@@ -1,0 +1,111 @@
+@import "./base.css";
+
+.body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 32px;
+  height: 100vh;
+  padding: 1rem 2rem;
+}
+
+/* Header Section */
+
+.header {
+  grid-area: header;
+  justify-self: center;
+  max-width: 1024px;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.header h1 {
+  font-family: var(--mono);
+  margin: 0;
+  text-align: center;
+}
+
+.header h1 span {
+  line-height: normal;
+}
+
+/* Navigation Section */
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.navbar a {
+  border-bottom: 1px solid var(--white);
+  color: inherit;
+  padding: 0.1rem;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+/* Main Section */
+
+.main {
+  grid-area: main;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.my-name strong {
+  color: var(--green);
+  display: block;
+  font-family: var(--mono);
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.main h2 {
+  padding: 1rem 0;
+}
+
+/* Footer Section */
+
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: footer;
+  justify-content: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Queries */
+
+@media (min-width: 600px) {
+  .main {
+    font-size: 1.6rem;
+  }
+  /* Responsive Header Section */
+
+  .header {
+    align-items: center;
+    display: flex;
+  }
+
+  .header h1 {
+    flex-basis: 100%;
+    text-align: left;
+  }
+}

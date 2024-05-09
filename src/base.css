@@ -1,0 +1,44 @@
+@import "./normalize.css";
+
+:root {
+  /* color palette */
+  --black: #171321;
+  --green: #5aab87;
+  --purple: #8f6ebd;
+  --white: #f7f8fa;
+  /* typography */
+  --sans: "Oxygen", sans-serif;
+  --mono: "Ubuntu Mono", monospace;
+  --font-size: 1.1rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: var(--font-size);
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+small {
+  font-size: 70%;
+}
+
+.content {
+  max-width: 630px;
+}
