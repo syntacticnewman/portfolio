@@ -1,12 +1,12 @@
 @import "./normalize.css";
 
 :root {
-  /* color palette */
+  /* Color Palette */
   --black: #171321;
   --green: #5aab87;
   --purple: #8f6ebd;
   --white: #f7f8fa;
-  /* typography */
+  /* Typography */
   --sans: "Oxygen", sans-serif;
   --mono: "Ubuntu Mono", monospace;
   --font-size: 1.1rem;
@@ -14,6 +14,7 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -27,6 +28,13 @@ body {
   color: var(--white);
   font-family: var(--sans);
   font-size: var(--font-size);
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 nav > ul {
@@ -37,8 +45,4 @@ nav > ul {
 
 small {
   font-size: 70%;
-}
-
-.content {
-  max-width: 630px;
 }

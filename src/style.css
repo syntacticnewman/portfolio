@@ -2,56 +2,62 @@
 
 .body {
   display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 32px;
-  height: 100vh;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: min-content auto min-content;
   padding: 1rem 2rem;
 }
 
 /* Header Section */
 
 .header {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
   grid-area: header;
+  justify-content: center;
   justify-self: center;
   max-width: 1024px;
-  padding-top: 1rem;
+  padding: 1rem 0;
   width: 100%;
 }
 
-.header h1 {
+/* Title */
+
+.title {
   font-family: var(--mono);
-  margin: 0;
   text-align: center;
+  flex-basis: 100%;
 }
 
-.header h1 span {
+.title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.title span {
   line-height: normal;
 }
 
-/* Navigation Section */
+/* Navigation */
 
-.navbar {
+.nav {
   padding: 1rem 0;
 }
 
-.navbar ul {
+.nav ul {
   display: flex;
   gap: 2rem;
   justify-content: center;
 }
 
-.navbar a {
-  border-bottom: 1px solid var(--white);
+.nav a {
+  border-bottom: 1px solid;
   color: inherit;
   padding: 0.1rem;
   text-decoration: none;
 }
 
-.navbar a:hover {
+.nav a:hover {
   border-color: var(--purple);
   color: var(--purple);
 }
@@ -60,16 +66,19 @@
 
 .main {
   grid-area: main;
-  margin: auto;
-  padding-top: 1rem;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.my-name strong {
+.content {
+  max-width: 630px;
+}
+
+.my-name {
   color: var(--green);
   display: block;
   font-family: var(--mono);
   font-size: 2.5em;
-  font-weight: bold;
   line-height: 1em;
 }
 
@@ -80,11 +89,8 @@
 /* Footer Section */
 
 .footer {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   grid-area: footer;
-  justify-content: center;
+  text-align: center;
 }
 
 .footer p {
@@ -97,15 +103,11 @@
   .main {
     font-size: 1.6rem;
   }
+
   /* Responsive Header Section */
 
-  .header {
-    align-items: center;
-    display: flex;
-  }
-
-  .header h1 {
-    flex-basis: 100%;
-    text-align: left;
+  .title {
+    flex-basis: auto;
+    margin-right: auto;
   }
 }
