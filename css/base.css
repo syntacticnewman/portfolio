@@ -1,5 +1,13 @@
 @import "./normalize.css";
 
+@font-face {
+  font-family: "Mona Sans";
+  src: url("fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
 :root {
   /* Color Palette */
   --black: #171321;
@@ -7,7 +15,7 @@
   --purple: #8f6ebd;
   --white: #f7f8fa;
   /* Typography */
-  --sans: "Oxygen", sans-serif;
+  --sans: "Mona Sans", sans-serif;
   --mono: "Ubuntu Mono", monospace;
   --font-size: 1.1rem;
 }
