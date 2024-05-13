@@ -1,6 +1,7 @@
 @import "./base.css";
 
-.body {
+/* Page */
+.page {
   display: grid;
   grid-template-areas: "header" "main" "footer";
   grid-template-rows: min-content auto min-content;
@@ -8,7 +9,6 @@
 }
 
 /* Header Section */
-
 .header {
   align-items: center;
   display: flex;
@@ -22,7 +22,6 @@
 }
 
 /* Title */
-
 .title {
   font-family: var(--mono);
   text-align: center;
@@ -39,7 +38,6 @@
 }
 
 /* Navigation */
-
 .nav {
   padding: 1rem 0;
 }
@@ -51,19 +49,17 @@
 }
 
 .nav a {
-  border-bottom: 1px solid;
   color: inherit;
   padding: 0.1rem;
   text-decoration: none;
 }
 
 .nav a:hover {
-  border-color: var(--purple);
+  border-bottom: 1px solid var(--purple);
   color: var(--purple);
 }
 
 /* Main Section */
-
 .main {
   grid-area: main;
   margin: 0 auto;
@@ -88,25 +84,19 @@
 }
 
 /* Footer Section */
-
 .footer {
   grid-area: footer;
   text-align: center;
 }
 
-.footer p {
-  margin: 0;
-}
-
 /* Responsive Queries */
-
 @media (min-width: 600px) {
-  .main {
+  /* Responsive Home Page */
+  .home .main {
     font-size: 1.6rem;
   }
 
   /* Responsive Header Section */
-
   .title {
     flex-basis: auto;
     margin-right: auto;
