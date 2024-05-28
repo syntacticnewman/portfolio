@@ -34,6 +34,7 @@
 }
 
 .header .title span {
+  font-weight: normal;
   line-height: normal;
 }
 
@@ -75,9 +76,18 @@
 .footer {
   grid-area: footer;
   text-align: center;
+  font-size: 60%;
+}
+
+.footer a {
+  color: var(--purple);
 }
 
 /* Home Page */
+.home .content {
+  margin-bottom: 1rem;
+}
+
 .home .content p:first-of-type {
   margin-top: 0;
 }
@@ -96,13 +106,26 @@
 }
 
 /* About Page */
+.about .main a {
+  color: var(--green);
+}
+
 .about .contact ul {
   padding-inline-start: 1rem;
   font-size: 80%;
 }
 
 .about .contact a {
-  color: var(--green);
+  color: var(--purple);
+}
+
+/* Legal Page */
+.legal .content h2 {
+  margin-bottom: 1rem;
+}
+
+.legal .footer p:last-of-type {
+  display: none;
 }
 
 /* Responsive Queries
